@@ -1,0 +1,5 @@
+NAME=acl
+VERSION=2.2.52
+REVISION=1
+SRC=http://download.savannah.gnu.org/releases/acl/acl-2.2.52.src.tar.gz
+SRCMD5=a61415312426e9c2212bd7dc7929abda
