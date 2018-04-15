@@ -7,9 +7,9 @@ sed -i -e "/TABS-1;/a if (x > (TABS-1)) x = (TABS-1);" libacl/__acl_to_any_text.
             --bindir=/bin \
             --disable-static \
             --libexecdir=/usr/lib
-make -j $SHED_NUMJOBS
-make DESTDIR=${SHED_FAKEROOT} install install-dev install-lib
-chmod -v 755 ${SHED_FAKEROOT}/usr/lib/libacl.so
-mkdir -v ${SHED_FAKEROOT}/lib
-mv -v ${SHED_FAKEROOT}/usr/lib/libacl.so.* ${SHED_FAKEROOT}/lib
-ln -sfv ../../lib/$(readlink ${SHED_FAKEROOT}/usr/lib/libacl.so) ${SHED_FAKEROOT}/usr/lib/libacl.so
+make -j $SHED_NUM_JOBS
+make DESTDIR=${SHED_FAKE_ROOT} install install-dev install-lib
+chmod -v 755 ${SHED_FAKE_ROOT}/usr/lib/libacl.so
+mkdir -v ${SHED_FAKE_ROOT}/lib
+mv -v ${SHED_FAKE_ROOT}/usr/lib/libacl.so.* ${SHED_FAKE_ROOT}/lib
+ln -sfv ../../lib/$(readlink ${SHED_FAKE_ROOT}/usr/lib/libacl.so) ${SHED_FAKE_ROOT}/usr/lib/libacl.so
